@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OTOSOLFTSINAN2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="STOK">
+    <Key>
+      <PropertyRef Name="STOK_NO" />
+    </Key>
+    <Property Name="STOK_NO" Type="Double" Nullable="false" />
+    <Property Name="STOK_ADI_TR" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="STOK_ADI_ING" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="BARKOD" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="BARK_TIP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="STOK_KOD_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ACILIS_TRH" Type="DateTime" Precision="3" />
+    <Property Name="GRUP_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="PNC_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="PNCSUBNO" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="BIRIMI" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="KRITIK_SEV" Type="Double" />
+    <Property Name="SIPARIS_SEV" Type="Double" />
+    <Property Name="HEDEF_SEV" Type="Double" />
+    <Property Name="FYT_TRH" Type="DateTime" Precision="3" />
+    <Property Name="ALIS_FYT_TL" Type="Double" />
+    <Property Name="ALIS_FYT_USD" Type="Double" />
+    <Property Name="ALIS_FYT_DOVIZ" Type="Double" />
+    <Property Name="SAT_FYT_TL" Type="Double" />
+    <Property Name="SAT_FYT_USD" Type="Double" />
+    <Property Name="SAT_FYT_DOVIZ" Type="Double" />
+    <Property Name="FYT_KUR" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="KDV" Type="Int32" />
+    <Property Name="SIPARIS_SURESI" Type="Double" />
+    <Property Name="ISKONTO_GRP" Type="Int32" />
+    <Property Name="VERGILER" Type="Double" />
+    <Property Name="MALIYET_FYT_TL" Type="Double" />
+    <Property Name="MALIYET_FYT_USD" Type="Double" />
+    <Property Name="MALIYET_FYT_DOVIZ" Type="Double" />
+    <Property Name="KAR_ORAN" Type="Double" />
+    <Property Name="AMBALAJ_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RESIM_NO" Type="Int16" />
+    <Property Name="KOORX" Type="Int16" />
+    <Property Name="KOORY" Type="Int16" />
+    <Property Name="ESKI_PART_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="KAYNAK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ETIKET" Type="Int32" />
+    <Property Name="WIRACC0" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WIRACC1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WIRATD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PUTRA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SATRIA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="QTY" Type="Double" />
+    <Property Name="RAF_YERI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="CLAIM_TUR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PAY" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ORJ" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MUH_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_IADE_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_IADE_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_ISK_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_ISK_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_KDV_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_KDV_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="YENI_KOD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="YENI_KOD_SON" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_GRSAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MUH_GRSATISK" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MODEL_NO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MERKEZ" Type="Byte" />
+    <Property Name="MALIYET_ORAN" Type="Double" />
+    <Property Name="REKABET" Type="Int16" />
+    <Property Name="MARKAKOD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ALTGRUP_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ISKGRUP" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ATILSTK_ISK" Type="Double" />
+    <Property Name="INS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="INS_USER" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="UPD_DATE" Type="DateTime" Precision="3" />
+    <Property Name="UPD_USER" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="SONALIS_FYT_TL" Type="Double" />
+    <Property Name="SONALIS_FYT_DOVIZ" Type="Double" />
+    <Property Name="URET_STK_KOD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GARANTI_BELGE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SERITAKIP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="OTOSOLFTSINAN2019Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="STOK" EntityType="Self.STOK" />
+  </EntityContainer>
+</Schema>

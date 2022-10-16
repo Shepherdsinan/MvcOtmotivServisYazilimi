@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OTOSOLFTSINAN2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="STOK">
+          <Key>
+            <PropertyRef Name="STOK_NO" />
+          </Key>
+          <Property Name="STOK_NO" Type="float" Nullable="false" />
+          <Property Name="STOK_ADI_TR" Type="varchar" MaxLength="45" />
+          <Property Name="STOK_ADI_ING" Type="varchar" MaxLength="60" />
+          <Property Name="BARKOD" Type="varchar" MaxLength="36" />
+          <Property Name="BARK_TIP" Type="varchar" MaxLength="1" />
+          <Property Name="STOK_KOD_NO" Type="varchar" MaxLength="25" />
+          <Property Name="ACILIS_TRH" Type="datetime" />
+          <Property Name="GRUP_NO" Type="varchar" MaxLength="11" />
+          <Property Name="PNC_NO" Type="varchar" MaxLength="11" />
+          <Property Name="PNCSUBNO" Type="varchar" MaxLength="9" />
+          <Property Name="BIRIMI" Type="char" MaxLength="5" />
+          <Property Name="KRITIK_SEV" Type="float" />
+          <Property Name="SIPARIS_SEV" Type="float" />
+          <Property Name="HEDEF_SEV" Type="float" />
+          <Property Name="FYT_TRH" Type="datetime" />
+          <Property Name="ALIS_FYT_TL" Type="float" />
+          <Property Name="ALIS_FYT_USD" Type="float" />
+          <Property Name="ALIS_FYT_DOVIZ" Type="float" />
+          <Property Name="SAT_FYT_TL" Type="float" />
+          <Property Name="SAT_FYT_USD" Type="float" />
+          <Property Name="SAT_FYT_DOVIZ" Type="float" />
+          <Property Name="FYT_KUR" Type="char" MaxLength="5" />
+          <Property Name="KDV" Type="int" />
+          <Property Name="SIPARIS_SURESI" Type="float" />
+          <Property Name="ISKONTO_GRP" Type="int" />
+          <Property Name="VERGILER" Type="float" />
+          <Property Name="MALIYET_FYT_TL" Type="float" />
+          <Property Name="MALIYET_FYT_USD" Type="float" />
+          <Property Name="MALIYET_FYT_DOVIZ" Type="float" />
+          <Property Name="KAR_ORAN" Type="float" />
+          <Property Name="AMBALAJ_NO" Type="varchar" MaxLength="11" />
+          <Property Name="ACIKLAMA" Type="text" />
+          <Property Name="RESIM_NO" Type="smallint" />
+          <Property Name="KOORX" Type="smallint" />
+          <Property Name="KOORY" Type="smallint" />
+          <Property Name="ESKI_PART_NO" Type="varchar" MaxLength="25" />
+          <Property Name="KAYNAK" Type="varchar" MaxLength="15" />
+          <Property Name="ETIKET" Type="int" />
+          <Property Name="WIRACC0" Type="char" MaxLength="1" />
+          <Property Name="WIRACC1" Type="char" MaxLength="1" />
+          <Property Name="WIRATD" Type="char" MaxLength="1" />
+          <Property Name="PUTRA" Type="char" MaxLength="1" />
+          <Property Name="SATRIA" Type="char" MaxLength="1" />
+          <Property Name="QTY" Type="float" />
+          <Property Name="RAF_YERI" Type="char" MaxLength="10" />
+          <Property Name="CLAIM_TUR" Type="char" MaxLength="1" />
+          <Property Name="PAY" Type="char" MaxLength="1" />
+          <Property Name="ORJ" Type="char" MaxLength="1" />
+          <Property Name="MUH_A" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_S" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_IADE_S" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_IADE_A" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_ISK_A" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_ISK_S" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_KDV_A" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_KDV_S" Type="varchar" MaxLength="30" />
+          <Property Name="YENI_KOD" Type="varchar" MaxLength="25" />
+          <Property Name="YENI_KOD_SON" Type="varchar" MaxLength="25" />
+          <Property Name="MUH_GRSAT" Type="varchar" MaxLength="30" />
+          <Property Name="MUH_GRSATISK" Type="varchar" MaxLength="30" />
+          <Property Name="MODEL_NO" Type="char" MaxLength="15" />
+          <Property Name="MERKEZ" Type="tinyint" />
+          <Property Name="MALIYET_ORAN" Type="float" />
+          <Property Name="REKABET" Type="smallint" />
+          <Property Name="MARKAKOD" Type="varchar" MaxLength="15" />
+          <Property Name="ALTGRUP_NO" Type="varchar" MaxLength="11" />
+          <Property Name="ISKGRUP" Type="varchar" MaxLength="11" />
+          <Property Name="ATILSTK_ISK" Type="float" />
+          <Property Name="INS_DATE" Type="datetime" />
+          <Property Name="INS_USER" Type="varchar" MaxLength="32" />
+          <Property Name="UPD_DATE" Type="datetime" />
+          <Property Name="UPD_USER" Type="varchar" MaxLength="32" />
+          <Property Name="SONALIS_FYT_TL" Type="float" />
+          <Property Name="SONALIS_FYT_DOVIZ" Type="float" />
+          <Property Name="URET_STK_KOD" Type="varchar" MaxLength="30" />
+          <Property Name="GARANTI_BELGE" Type="char" MaxLength="1" />
+          <Property Name="SERITAKIP" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="OTOSOLFTSINAN2019ModelStoreContainer">
+          <EntitySet Name="STOK" EntityType="Self.STOK" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OTOSOLFTSINAN2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="STOK">
+          <Key>
+            <PropertyRef Name="STOK_NO" />
+          </Key>
+          <Property Name="STOK_NO" Type="Double" Nullable="false" />
+          <Property Name="STOK_ADI_TR" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI_ING" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="BARKOD" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="BARK_TIP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_KOD_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ACILIS_TRH" Type="DateTime" Precision="3" />
+          <Property Name="GRUP_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="PNC_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="PNCSUBNO" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="BIRIMI" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="KRITIK_SEV" Type="Double" />
+          <Property Name="SIPARIS_SEV" Type="Double" />
+          <Property Name="HEDEF_SEV" Type="Double" />
+          <Property Name="FYT_TRH" Type="DateTime" Precision="3" />
+          <Property Name="ALIS_FYT_TL" Type="Double" />
+          <Property Name="ALIS_FYT_USD" Type="Double" />
+          <Property Name="ALIS_FYT_DOVIZ" Type="Double" />
+          <Property Name="SAT_FYT_TL" Type="Double" />
+          <Property Name="SAT_FYT_USD" Type="Double" />
+          <Property Name="SAT_FYT_DOVIZ" Type="Double" />
+          <Property Name="FYT_KUR" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="KDV" Type="Int32" />
+          <Property Name="SIPARIS_SURESI" Type="Double" />
+          <Property Name="ISKONTO_GRP" Type="Int32" />
+          <Property Name="VERGILER" Type="Double" />
+          <Property Name="MALIYET_FYT_TL" Type="Double" />
+          <Property Name="MALIYET_FYT_USD" Type="Double" />
+          <Property Name="MALIYET_FYT_DOVIZ" Type="Double" />
+          <Property Name="KAR_ORAN" Type="Double" />
+          <Property Name="AMBALAJ_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RESIM_NO" Type="Int16" />
+          <Property Name="KOORX" Type="Int16" />
+          <Property Name="KOORY" Type="Int16" />
+          <Property Name="ESKI_PART_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="KAYNAK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ETIKET" Type="Int32" />
+          <Property Name="WIRACC0" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WIRACC1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WIRATD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PUTRA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SATRIA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="QTY" Type="Double" />
+          <Property Name="RAF_YERI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CLAIM_TUR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PAY" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ORJ" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MUH_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_IADE_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_IADE_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_ISK_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_ISK_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_KDV_A" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_KDV_S" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="YENI_KOD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="YENI_KOD_SON" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_GRSAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MUH_GRSATISK" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MODEL_NO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MERKEZ" Type="Byte" />
+          <Property Name="MALIYET_ORAN" Type="Double" />
+          <Property Name="REKABET" Type="Int16" />
+          <Property Name="MARKAKOD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ALTGRUP_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ISKGRUP" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ATILSTK_ISK" Type="Double" />
+          <Property Name="INS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="INS_USER" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="UPD_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPD_USER" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="SONALIS_FYT_TL" Type="Double" />
+          <Property Name="SONALIS_FYT_DOVIZ" Type="Double" />
+          <Property Name="URET_STK_KOD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GARANTI_BELGE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SERITAKIP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="OTOSOLFTSINAN2019Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="STOK" EntityType="Self.STOK" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OTOSOLFTSINAN2019ModelStoreContainer" CdmEntityContainer="OTOSOLFTSINAN2019Entities1">
+          <EntitySetMapping Name="STOK">
+            <EntityTypeMapping TypeName="OTOSOLFTSINAN2019Model.STOK">
+              <MappingFragment StoreEntitySet="STOK">
+                <ScalarProperty Name="STOK_NO" ColumnName="STOK_NO" />
+                <ScalarProperty Name="STOK_ADI_TR" ColumnName="STOK_ADI_TR" />
+                <ScalarProperty Name="STOK_ADI_ING" ColumnName="STOK_ADI_ING" />
+                <ScalarProperty Name="BARKOD" ColumnName="BARKOD" />
+                <ScalarProperty Name="BARK_TIP" ColumnName="BARK_TIP" />
+                <ScalarProperty Name="STOK_KOD_NO" ColumnName="STOK_KOD_NO" />
+                <ScalarProperty Name="ACILIS_TRH" ColumnName="ACILIS_TRH" />
+                <ScalarProperty Name="GRUP_NO" ColumnName="GRUP_NO" />
+                <ScalarProperty Name="PNC_NO" ColumnName="PNC_NO" />
+                <ScalarProperty Name="PNCSUBNO" ColumnName="PNCSUBNO" />
+                <ScalarProperty Name="BIRIMI" ColumnName="BIRIMI" />
+                <ScalarProperty Name="KRITIK_SEV" ColumnName="KRITIK_SEV" />
+                <ScalarProperty Name="SIPARIS_SEV" ColumnName="SIPARIS_SEV" />
+                <ScalarProperty Name="HEDEF_SEV" ColumnName="HEDEF_SEV" />
+                <ScalarProperty Name="FYT_TRH" ColumnName="FYT_TRH" />
+                <ScalarProperty Name="ALIS_FYT_TL" ColumnName="ALIS_FYT_TL" />
+                <ScalarProperty Name="ALIS_FYT_USD" ColumnName="ALIS_FYT_USD" />
+                <ScalarProperty Name="ALIS_FYT_DOVIZ" ColumnName="ALIS_FYT_DOVIZ" />
+                <ScalarProperty Name="SAT_FYT_TL" ColumnName="SAT_FYT_TL" />
+                <ScalarProperty Name="SAT_FYT_USD" ColumnName="SAT_FYT_USD" />
+                <ScalarProperty Name="SAT_FYT_DOVIZ" ColumnName="SAT_FYT_DOVIZ" />
+                <ScalarProperty Name="FYT_KUR" ColumnName="FYT_KUR" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="SIPARIS_SURESI" ColumnName="SIPARIS_SURESI" />
+                <ScalarProperty Name="ISKONTO_GRP" ColumnName="ISKONTO_GRP" />
+                <ScalarProperty Name="VERGILER" ColumnName="VERGILER" />
+                <ScalarProperty Name="MALIYET_FYT_TL" ColumnName="MALIYET_FYT_TL" />
+                <ScalarProperty Name="MALIYET_FYT_USD" ColumnName="MALIYET_FYT_USD" />
+                <ScalarProperty Name="MALIYET_FYT_DOVIZ" ColumnName="MALIYET_FYT_DOVIZ" />
+                <ScalarProperty Name="KAR_ORAN" ColumnName="KAR_ORAN" />
+                <ScalarProperty Name="AMBALAJ_NO" ColumnName="AMBALAJ_NO" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="RESIM_NO" ColumnName="RESIM_NO" />
+                <ScalarProperty Name="KOORX" ColumnName="KOORX" />
+                <ScalarProperty Name="KOORY" ColumnName="KOORY" />
+                <ScalarProperty Name="ESKI_PART_NO" ColumnName="ESKI_PART_NO" />
+                <ScalarProperty Name="KAYNAK" ColumnName="KAYNAK" />
+                <ScalarProperty Name="ETIKET" ColumnName="ETIKET" />
+                <ScalarProperty Name="WIRACC0" ColumnName="WIRACC0" />
+                <ScalarProperty Name="WIRACC1" ColumnName="WIRACC1" />
+                <ScalarProperty Name="WIRATD" ColumnName="WIRATD" />
+                <ScalarProperty Name="PUTRA" ColumnName="PUTRA" />
+                <ScalarProperty Name="SATRIA" ColumnName="SATRIA" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="RAF_YERI" ColumnName="RAF_YERI" />
+                <ScalarProperty Name="CLAIM_TUR" ColumnName="CLAIM_TUR" />
+                <ScalarProperty Name="PAY" ColumnName="PAY" />
+                <ScalarProperty Name="ORJ" ColumnName="ORJ" />
+                <ScalarProperty Name="MUH_A" ColumnName="MUH_A" />
+                <ScalarProperty Name="MUH_S" ColumnName="MUH_S" />
+                <ScalarProperty Name="MUH_IADE_S" ColumnName="MUH_IADE_S" />
+                <ScalarProperty Name="MUH_IADE_A" ColumnName="MUH_IADE_A" />
+                <ScalarProperty Name="MUH_ISK_A" ColumnName="MUH_ISK_A" />
+                <ScalarProperty Name="MUH_ISK_S" ColumnName="MUH_ISK_S" />
+                <ScalarProperty Name="MUH_KDV_A" ColumnName="MUH_KDV_A" />
+                <ScalarProperty Name="MUH_KDV_S" ColumnName="MUH_KDV_S" />
+                <ScalarProperty Name="YENI_KOD" ColumnName="YENI_KOD" />
+                <ScalarProperty Name="YENI_KOD_SON" ColumnName="YENI_KOD_SON" />
+                <ScalarProperty Name="MUH_GRSAT" ColumnName="MUH_GRSAT" />
+                <ScalarProperty Name="MUH_GRSATISK" ColumnName="MUH_GRSATISK" />
+                <ScalarProperty Name="MODEL_NO" ColumnName="MODEL_NO" />
+                <ScalarProperty Name="MERKEZ" ColumnName="MERKEZ" />
+                <ScalarProperty Name="MALIYET_ORAN" ColumnName="MALIYET_ORAN" />
+                <ScalarProperty Name="REKABET" ColumnName="REKABET" />
+                <ScalarProperty Name="MARKAKOD" ColumnName="MARKAKOD" />
+                <ScalarProperty Name="ALTGRUP_NO" ColumnName="ALTGRUP_NO" />
+                <ScalarProperty Name="ISKGRUP" ColumnName="ISKGRUP" />
+                <ScalarProperty Name="ATILSTK_ISK" ColumnName="ATILSTK_ISK" />
+                <ScalarProperty Name="INS_DATE" ColumnName="INS_DATE" />
+                <ScalarProperty Name="INS_USER" ColumnName="INS_USER" />
+                <ScalarProperty Name="UPD_DATE" ColumnName="UPD_DATE" />
+                <ScalarProperty Name="UPD_USER" ColumnName="UPD_USER" />
+                <ScalarProperty Name="SONALIS_FYT_TL" ColumnName="SONALIS_FYT_TL" />
+                <ScalarProperty Name="SONALIS_FYT_DOVIZ" ColumnName="SONALIS_FYT_DOVIZ" />
+                <ScalarProperty Name="URET_STK_KOD" ColumnName="URET_STK_KOD" />
+                <ScalarProperty Name="GARANTI_BELGE" ColumnName="GARANTI_BELGE" />
+                <ScalarProperty Name="SERITAKIP" ColumnName="SERITAKIP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

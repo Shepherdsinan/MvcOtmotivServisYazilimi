@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblkategori">
+    <Key>
+      <PropertyRef Name="ıd" />
+    </Key>
+    <Property Name="ıd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblstok" Relationship="Self.FK_tblstok_tblkategori" FromRole="tblkategori" ToRole="tblstok" />
+  </EntityType>
+  <EntityType Name="tblstok">
+    <Key>
+      <PropertyRef Name="ıd" />
+    </Key>
+    <Property Name="ıd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kategorid" Type="Int32" Nullable="false" />
+    <Property Name="marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stok" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="tblkategori" Relationship="Self.FK_tblstok_tblkategori" FromRole="tblstok" ToRole="tblkategori" />
+  </EntityType>
+  <Association Name="FK_tblstok_tblkategori">
+    <End Role="tblkategori" Type="Self.tblkategori" Multiplicity="1" />
+    <End Role="tblstok" Type="Self.tblstok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkategori">
+        <PropertyRef Name="ıd" />
+      </Principal>
+      <Dependent Role="tblstok">
+        <PropertyRef Name="kategorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MvcTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tblkategori" EntityType="Self.tblkategori" />
+    <EntitySet Name="tblstok" EntityType="Self.tblstok" />
+    <AssociationSet Name="FK_tblstok_tblkategori" Association="Self.FK_tblstok_tblkategori">
+      <End Role="tblkategori" EntitySet="tblkategori" />
+      <End Role="tblstok" EntitySet="tblstok" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

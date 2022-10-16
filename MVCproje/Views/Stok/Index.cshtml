@@ -1,0 +1,75 @@
+﻿@using MVCproje.Models.oto
+@model List<STOK>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table id="tbl1" class="table table-bordered" style="display:block; overflow-x:auto; white-space:nowrap;">
+    <thead>
+
+
+        <tr>
+            <th>STOK_KOD_NO</th>
+            <th>STOK_ADI_TR</th>
+            <th>MARKAKOD</th>
+            <th>ALIS_FYT_TL</th>
+            <th>SAT_FYT_TL</th>
+            <th>KDV</th>
+            <th>FYT_KUR</th>
+            <th>SAT_FYT_DOVIZ</th>
+            <th>ESKI_PART_NO</th>
+            <th>YENI_KOD</th>
+            <th>YENI_KOD_SON</th>
+            <th>BARKOD</th>
+            <th>ORJ</th>
+            <th>PAY</th>
+            <th>GRUP_NO</th>
+            <th>ALTGRUP_NO</th>
+            <th>MODEL_NO</th>
+            <th>STOK_ADI_ING</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var urn in Model)
+        {
+        <tr>
+            <td>@urn.STOK_KOD_NO</td>
+            <td>@urn.STOK_ADI_TR</td>
+            <td>@urn.MARKAKOD</td>
+            <td>@urn.ALIS_FYT_TL</td>
+            <td>@urn.SAT_FYT_TL</td>
+            <td>@urn.KDV</td>
+            <td>@urn.FYT_KUR</td>
+            <td>@urn.SAT_FYT_DOVIZ</td>
+            <td>@urn.ESKI_PART_NO</td>
+            <td>@urn.YENI_KOD</td>
+            <td>@urn.YENI_KOD_SON</td>
+            <td>@urn.BARKOD</td>
+            <td>@urn.ORJ</td>
+            <td>@urn.PAY</td>
+            <td>@urn.GRUP_NO</td>
+            <td>@urn.ALTGRUP_NO</td>
+            <td>@urn.MODEL_NO</td>
+            <td>@urn.STOK_ADI_ING</td>   
+
+        </tr>
+        }
+    </tbody>
+
+</table>
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-html5-1.5.6/fh-3.1.4/datatables.min.js"></script>
+
+<script>
+
+    $('#tbl1').DataTable();
+
+</script>
+

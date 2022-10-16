@@ -1,0 +1,31 @@
+﻿@model  MVCproje.Models.Entity.tblstok
+@{
+    ViewBag.Title = "Urunlerigetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.ıd)
+        @Html.TextBoxFor(m => m.ıd, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.urunadi)
+        @Html.TextBoxFor(m => m.urunadi, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.kategorid)
+        @Html.DropDownListFor(m => m.tblkategori.ıd, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.marka)
+        @Html.TextBoxFor(m => m.marka, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.stok)
+        @Html.TextBoxFor(m => m.stok, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-warning">Ürün Güncelle</button>
+    </div>
+}
+
+

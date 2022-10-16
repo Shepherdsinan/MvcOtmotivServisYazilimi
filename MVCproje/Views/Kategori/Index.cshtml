@@ -1,0 +1,68 @@
+﻿@using MVCproje.Models.Entity
+@model PagedList.IPagedList<tblkategori>
+@using PagedList
+@using PagedList.Mvc
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori adı</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <td>@ktgr.ıd</td>
+                <td>@ktgr.adı</td>
+                <td><a href="/KATEGORI/SIL/@ktgr.ıd" class="btn btn-danger">SİL</a></td>
+                <td><a href="/KATEGORI/Kategorigetir/@ktgr.ıd" class="btn btn-success">GÜNCELLE</a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+<center>    @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))</center>
+
+
+<a href="/KATEGORI/YeniKategori/" class="btn btn-primary">YENİ KATEGORİ EKLE</a>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    Yeni Kategori Ekle Modal
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Kategori Ekleme Ekranı</h2>
+                
+            </div>
+            <form method="post" action="/KATEGORI/YeniKategori/">
+                <div class="modal-body">
+
+                    <div>
+                        <label>Kategori Adı</label>
+            <input type="text" name="adı" class="form-control" />
+                        @*<label>Kategori Adı</label>
+                        @Html.TextBoxFor(m => m.adı, new { @class = "form-control", @id = "txtAd" })
+                        @Html.ValidationMessageFor(m => m.adı, "", new { @style = "color:red" })*@
+                    </div>
+                    <div style="margin-top:15px">
+                        <button type="submit" class="btn btn-info">Kategori Ekle</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
